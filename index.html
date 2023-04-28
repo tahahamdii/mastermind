@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastermind Game</title>
+    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Handlee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <section id="information">
+        <h2 id="name-of-user"></h2>
+        <div>
+            <h3>you have <span id="timer"></span> left</h3>
+        </div>  
+        <section id="win-status"></section>
+    </section>
+    <section id="setbg">
+        <h1 id="main-header">MasterMind</h1>
+        <section id="board">
+            <section id="guesses">
+                <section id="computer-choices">
+                    <div id="col0"></div>
+                    <div id="col1"></div>
+                    <div id="col2"></div>
+                    <div id="col3"></div>
+                </section>
+                <section id="player-guesses">
+                    <!-- guess10-->
+                    <div id="r9c0"></div>
+                    <div id="r9c1"></div>
+                    <div id="r9c2"></div>
+                    <div id="r9c3"></div>
+                    <div id="r9resualt" class="resualt">
+                        <div id="r9re0"></div>
+                        <div id="r9re1"></div>
+                        <div id="r9re2"></div>
+                        <div id="r9re3"></div>
+                    </div>
+                    <!-- guess9 -->
+                    <div id="r8c0"></div>
+                    <div id="r8c1"></div>
+                    <div id="r8c2"></div>
+                    <div id="r8c3"></div>
+                    <div id="r8resualt" class="resualt">
+                        <div id="r8re0"></div>
+                        <div id="r8re1"></div>
+                        <div id="r8re2"></div>
+                        <div id="r8re3"></div>
+                    </div>
+                    <!-- guess8 -->
+                    <div id="r7c0"></div>
+                    <div id="r7c1"></div>
+                    <div id="r7c2"></div>
+                    <div id="r7c3"></div>
+                    <div id="r7resualt" class="resualt">
+                        <div id="r7re0"></div>
+                        <div id="r7re1"></div>
+                        <div id="r7re2"></div>
+                        <div id="r7re3"></div>
+                    </div>
+                    <!-- guess7 -->
+                    <div id="r6c0"></div>
+                    <div id="r6c1"></div>
+                    <div id="r6c2"></div>
+                    <div id="r6c3"></div>
+                    <div id="r6resualt" class="resualt">
+                        <div id="r6re0"></div>
+                        <div id="r6re1"></div>
+                        <div id="r6re2"></div>
+                        <div id="r6re3"></div>
+                    </div>
+                    <!-- guess6 -->
+                    <div id="r5c0"></div>
+                    <div id="r5c1"></div>
+                    <div id="r5c2"></div>
+                    <div id="r5c3"></div>
+                    <div id="r5resualt" class="resualt">
+                        <div id="r5re0"></div>
+                        <div id="r5re1"></div>
+                        <div id="r5re2"></div>
+                        <div id="r5re3"></div>
+                        </div>
+                    <!-- guess5 -->
+                    <div id="r4c0"></div>
+                    <div id="r4c1"></div>
+                    <div id="r4c2"></div>
+                    <div id="r4c3"></div>
+                    <div id="r4resualt" class="resualt">
+                        <div id="r4re0"></div>
+                        <div id="r4re1"></div>
+                        <div id="r4re2"></div>
+                        <div id="r4re3"></div>
+                    </div>
+                    <!-- guess4 -->
+                    <div id="r3c0"></div>
+                    <div id="r3c1"></div>
+                    <div id="r3c2"></div>
+                    <div id="r3c3"></div>
+                    <div id="r3resualt" class="resualt">
+                        <div id="r3re0"></div>
+                        <div id="r3re1"></div>
+                        <div id="r3re2"></div>
+                        <div id="r3re3"></div>
+                    </div>
+                    <!-- guess3 -->
+                    <div id="r2c0"></div>
+                    <div id="r2c1"></div>
+                    <div id="r2c2"></div>
+                    <div id="r2c3"></div>
+                    <div id="r2resualt" class="resualt">
+                        <div id="r2re0"></div>
+                        <div id="r2re1"></div>
+                        <div id="r2re2"></div>
+                        <div id="r2re3"></div>
+                    </div>
+                    <!-- guess2 -->
+                    <div id="r1c0"></div>
+                    <div id="r1c1"></div>
+                    <div id="r1c2"></div>
+                    <div id="r1c3"></div>
+                    <div id="r1resualt" class="resualt">
+                        <div id="r1re0"></div>
+                        <div id="r1re1"></div>
+                        <div id="r1re2"></div>
+                        <div id="r1re3"></div>
+                    </div>
+                    <!-- guess1 -->
+                    <div id="r0c0"></div>
+                    <div id="r0c1"></div>
+                    <div id="r0c2"></div>
+                    <div id="r0c3"></div>
+                    <div id="r0resualt" class="resualt">
+                        <div id="r0re0"></div>
+                        <div id="r0re1"></div>
+                        <div id="r0re2"></div>
+                        <div id="r0re3"></div>
+                    </div> 
+                </section>
+            </section>
+            <section id="colors"></section>
+            <button id="check-btn">Check</button>
+            <button id="reset-btn">Reset</button>
+        </section>
+    </section>
+    <div id="myModal" class="modal">
+        <div class="modal-content" id="first-modal-page">
+            <h2>Game Instructions : </h2>
+            <p>
+                You have to choose 4 colored pegs and put them in a perfect (correct) places, and guess the answer in a certain time (depends on difficulty level).<br><br>
+                <span id="redpegs">RED pegs</span> : Right color in a Corroct place.<br>
+                <span id="blackpegs">BLACK pegs</span> : Right color ina Wrong place.<br> 
+            </p>
+            <button id="next-btn">NEXT</button>
+        </div>
+        <div class="modal-content" id="second-modal-page">
+            <p id="enter-name">Please Enter Your Name</p>
+            <input type="text" id="name" >
+            <!-- <button id="name-btn">submit</button> -->
+            <p id="select-difficualty">Please Select The Difficulty Level</p>
+            <div>
+                <button class="difficulty-level" id="difficulty0">Easy</button>
+                <button class="difficulty-level" id="difficulty1">Medium</button>
+                <button class="difficulty-level" id="difficulty2">Hard</button>
+            </div>
+            <button id="start-btn">START</button>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

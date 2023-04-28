@@ -1,0 +1,32 @@
+- When game loads:
+    by choosing the difficualty level:
+        + update the display by setting the colors and timer.
+        + Initialize all state variables by calling init();
+
+_ When player chooe color by clicking on a color peg:
+    - Get the index of the column clicked by extracting it from the column's id
+    - If the player didn't click the column exit the function
+    - add colors to the active row of the board
+
+- When player click on check button :
+    if the active row of board does not have null: 
+        + compare the colors of ative row and random colors :
+            -if the color is in a right column add 1 to the perfect and replace the color with -1;
+            _ else the color is right but in the wrong column add 1 to the almost and replace the color with -1
+
+    now call showResualt and winGame functions to show the resualt.
+
+- winGame logic:
+    if we have the perfect is 4:
+        + stop the timer
+        + show random colors that computer generate
+        + say `WINNER :)`
+    else 
+     + add 1 to the active row (next row will be active)
+     + if active row is not the last row + 1
+        - player can guess again
+     + else
+        - call gameOver function
+
+
+     
